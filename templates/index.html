@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Poem</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>{{ poem.title }}</h1>
+                <h5 class="text-muted">by {{ poem.author }}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ poem.content }}</p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-primary">Show Another Poem</a>
+        </div>
+    </div>
+</body>
+</html>
