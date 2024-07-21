@@ -15,7 +15,7 @@
                 <h5 class="text-muted">by {{ poem.author }}</h5>
             </div>
             <div class="card-body">
-                <p class="card-text">{{ poem.content }}</p>
+                <p class="card-text"><pre>{{ poem.content }}</pre></p>
             </div>
         </div>
         <div class="text-center mt-3">
@@ -26,7 +26,7 @@
         </div>
     </div>
     <script>
-        document.getElementById('reveal-btn').addEventListener('click', function() {
+            document.getElementById('reveal-btn').addEventListener('click', function() {
             var poemInfo = document.getElementById('poem-info');
             if (poemInfo.style.display === 'none') {
                 poemInfo.style.display = 'block';
@@ -36,6 +36,7 @@
                 this.textContent = 'Reveal Title and Author';
             }
         });
+
     </script>
 </body>
 </html>
