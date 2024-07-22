@@ -8,7 +8,7 @@ def get_random_poem():
     # Read the CSV file
     df = pd.read_csv('kaggle_poem_dataset.csv')
     # Choose a random poem
-    random_poem = df[df["Poetry Foundation ID"] == 55546].iloc[0] #df.sample(n=1).iloc[0]
+    random_poem = df.sample(n=1).iloc[0]
     return {
         'title': random_poem['Title'].replace(' Launch Audio in a New Window',''),
         'author': random_poem['Author'],
